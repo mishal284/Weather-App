@@ -2,10 +2,10 @@ const api ={
   key: '92c68d0449f3c310633852c40bd661c1',
   base: 'https://api.openweathermap.org/data/2.5/'
 }
-//set up event listener on the search box
+
 const searchBox= document.querySelector('.search-box');
 searchBox.addEventListener('keypress', setQuery);
-//when we press a key and then the key were actually looking to be pressed it's number 13 which is equal to the enter key or the return key on your keyboard and this will over ride this
+
 function setQuery(evt){
   if(evt.keyCode ==13){
       getResults(searchBox.value);
@@ -40,7 +40,7 @@ function displayResults(weather){
 
 function dateBuilder(d){
   let months =['january', 'feb', 'march','april', 'june', 'july','august', 'september', 'october', 'november', 'december'];
-  let days= ['monday', 'tuesday', 'wednesday', 'thursday','friday', 'saturday', 'sunday'];
+  let days= ['sunday','monday', 'tuesday', 'wednesday', 'thursday','friday', 'saturday'];
    let day = days[d.getDay()];
    let date = d.getDate();
    let month= months[d.getMonth()];
